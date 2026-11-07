@@ -1,0 +1,35 @@
+{
+  "name": "browos",
+  "productName": "BrowOS",
+  "version": "1.0.1",
+  "description": "Turns your new tab into a desktop OS with windows, a Start menu, a taskbar, built-in apps, BrowStore and custom wallpapers.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "build": {
+    "appId": "com.lucpastc.browos",
+    "productName": "BrowOS",
+    "asar": false,
+    "files": [
+      "**/*"
+    ],
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "icons/browos-logo.png"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    }
+  },
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.9.0"
+  }
+}
